@@ -30,6 +30,7 @@ RUN pwsh -Command Install-Module -Name Az -Scope AllUsers -Repository PSGallery 
 
 # Install user tools
 RUN apt-get install nano -y \
+ && apt-get install vim -y \
  && apt-get install tree -y \
  && apt-get install iputils-ping -y \
  && apt-get install traceroute -y
