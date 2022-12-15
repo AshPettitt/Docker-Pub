@@ -7,7 +7,8 @@ RUN apt-get upgrade -y
 # Set Locale and TimeZone
 RUN echo 'tzdata tzdata/Areas select Europe' | debconf-set-selections
 RUN echo 'tzdata tzdata/Zones/Europe select London' | debconf-set-selections
-RUN DEBIAN_FRONTEND=noninteractive apt-get install tzdata -y
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+RUN apt-get install tzdata -y
 
 # Install pre-reqs
 RUN apt-get install apt-utils -y
