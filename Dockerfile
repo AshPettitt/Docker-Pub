@@ -10,7 +10,8 @@ RUN echo 'tzdata tzdata/Areas select Europe' | debconf-set-selections \
  && DEBIAN_FRONTEND=noninteractive apt-get install tzdata -y
 
 # Install pre-reqs and tools
-RUN apt-get install gnupg -y \
+RUN apt-get install apt-utils -y \
+ && apt-get install gnupg -y \
  && apt-get install software-properties-common -y \
  && apt-get install curl -y \
  && apt-get install wget -y \
