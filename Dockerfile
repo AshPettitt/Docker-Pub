@@ -11,7 +11,12 @@ RUN echo 'tzdata tzdata/Areas select Europe' | debconf-set-selections \
 
 # Install pre-reqs
 RUN apt-get install apt-utils -y \
+ && apt-get install gnupg -y \
+ && apt-get install software-properties-common -y \
  && apt-get install curl -y \
+ && apt-get install wget -y \
+ && apt-get install apt-transport-https -y \
+ && apt-get install ca-certificates -y
  && apt-get install wget -y
 
 # Install PowerShell
