@@ -33,4 +33,5 @@ RUN apt-get install nano -y \
  && apt-get install vim -y \
  && apt-get install tree -y \
  && apt-get install iputils-ping -y \
- && apt-get install traceroute -y
+ && apt-get install traceroute -y \
+ && apt-get install dnsutils -y
